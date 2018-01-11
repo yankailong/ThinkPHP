@@ -91,7 +91,8 @@ class TestController extends Controller
 		$model -> goods_name = 'ykl';
 		$model -> goods_price = '1';
 		$res = $model ->add();
-		dump($res);
+		123
+		// dump($res);
 
 	}
 }
