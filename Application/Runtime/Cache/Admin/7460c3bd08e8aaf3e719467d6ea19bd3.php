@@ -117,7 +117,7 @@
                         <td><?php echo (date("Y-m-d H:i:s",$vol["goods_create_time"])); ?></td>
                         <td>
                             <a href="/index.php/Admin/Goods/edit/id/<?php echo ($vol["id"]); ?>"> 编辑 </a>
-                            <a href="/Public/Admin/javascript:void(0);" onclick="if(confirm('确认删除？')) location.href='/index.php/Admin/Goods/delete/id/<?php echo ($vol["id"]); ?>'"> 删除 </a>
+                            <a href="/index.php/Admin/Goods/delete" onclick="if(confirm('确认删除？')) location.href='/index.php/Admin/Goods/delete/id/<?php echo ($vol["id"]); ?>'"> 删除 </a>
                         </td>
                     </tr><?php endforeach; endif; ?>
                 <!-- <tr class="error">

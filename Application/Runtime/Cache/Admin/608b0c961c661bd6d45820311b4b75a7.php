@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="/Public/Admin/css/bootstrap-responsive.min.css">
 </head>
 <body>
+
 <!-- 上 -->
 <div class="navbar">
     <div class="navbar-inner">
@@ -68,6 +69,7 @@
         <li><a href="/Public/Admin/javascript:void(0);">密码修改</a></li>
     </ul>
 </div>
+
 <!-- 右 -->
 <div class="content">
     <div class="header">
@@ -75,7 +77,8 @@
     </div>
     
     <!-- edit form -->
-    <form action="" method="post" id="tab" enctype="multipart/form-data">
+    <form action="/index.php/Admin/Goods/edit/id/4" method="post" id="tab" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?php echo ($goods["id"]); ?>">
         <ul class="nav nav-tabs">
           <li role="presentation" class="active"><a href="/Public/Admin/#basic" data-toggle="tab">基本信息</a></li>
           <li role="presentation"><a href="/Public/Admin/#desc" data-toggle="tab">商品描述</a></li>
@@ -86,31 +89,31 @@
             <div class="tab-pane fade in active" id="basic">
                 <div class="well">
                     <label>商品名称：</label>
-                    <input type="text" name="" value="test1" class="input-xlarge">
+                    <input type="text" name="goods_name" value="<?php echo ($goods["goods_name"]); ?>" class="input-xlarge">
                     <label>商品价格：</label>
-                    <input type="text" name="" value="100" class="input-xlarge">
+                    <input type="text" name="goods_price" value="<?php echo ($goods["goods_price"]); ?>" class="input-xlarge">
                     <label>商品数量：</label>
-                    <input type="text" name="" value="200" class="input-xlarge">
+                    <input type="text" name="goods_number" value="<?php echo ($goods["goods_number"]); ?>" class="input-xlarge">
                     <label>商品logo：</label>
-                    <input type="file" name="" value="" class="input-xlarge">
+                    <input type="file" name="" value="<?php echo ($goods["goods_small_img"]); ?>" class="input-xlarge">
                 </div>
             </div>
             <div class="tab-pane fade in" id="desc">
                 <div class="well">
                     <label>商品简介：</label>
-                    <textarea value="Smith" name="" rows="3" class="input-xlarge">edit</textarea>
+                    <textarea value="Smith" name="goods_introduce" rows="3" class="input-xlarge" ><?php echo ($goods["goods_introduce"]); ?></textarea>
                 </div>
             </div>
             <div class="tab-pane fade in" id="attr">
                 <div class="well">
                     <label>商品分类：</label>
-                    <select name="" class="input-xlarge">
+                    <select name="cate_id" class="input-xlarge">
                         <option value="2">电脑</option>
                         <option value="1">手机</option>
                     </select>
                     <div>
                         <label>商品品牌：</label>
-                        <input type="text" name="" value="edit" class="input-xlarge">
+                        <input type="text" name="type_id" value="edit" class="input-xlarge">
                         <label>商品型号：</label>
                         <input type="text" name="" value="edit" class="input-xlarge">
                         <label>商品重量：</label>
