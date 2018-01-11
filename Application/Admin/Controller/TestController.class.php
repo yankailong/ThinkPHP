@@ -91,10 +91,27 @@ class TestController extends Controller
 		$model -> goods_name = 'ykl';
 		$model -> goods_price = '1';
 		$res = $model ->add();
-		123
 		// dump($res);
 
 	}
-}
 
+	//修改
+	public function xiugai() {
+		//实例化模型
+		$model = D('Goods');
+		//一维数组
+		// $data = array('id' => 10, 'goods_name' => 'test editykm');
+		// //调用save方法修改
+		// $res = $model ->save($data);
+		// dump($res);die;
+		
+		//AR方式
+		$model -> id = 11;
+		$model -> goods_name = 'yankialong';
+		//调用sava方法
+		$res = $model -> save();
+		dump($res);
+	}
+
+}
 ?>
