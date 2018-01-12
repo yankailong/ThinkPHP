@@ -128,5 +128,50 @@ class TestController extends Controller
 		echo $page -> getName();
 	}
 
+	public function test_cookie(){
+		//设置cookie
+		cookie('username', 'ykl');
+		//读取cookie  cookie('username')
+		dump(cookie('username'));
+		//删除cookie
+		cookie('username', null);
+		dump(cookie('username'));
+
+		//设置cookie其他参数
+		// $options = 3;//第三个参数是数字，设置了有效期，单位是秒
+		$options = array('expire' => 3, 'prefix' => 'shop_'); //数组格式的设置
+		// $options = "expire=3&prefix=shop_";//字符串格式的设置
+		cookie('email', 'ykl@qq.cn', $options);
+		dump(cookie('shop_email'));
+		
+	}
+
+	public function test_session(){
+		session('username', 'zhenzhen');
+		dump(session('username'));
+		session('username', null);
+		dump(session('username'));
+
+		session('user',array('username'=>'zhenzhen','age'=>18));
+		//修改session中数组中的摸一个值
+		/*$user = session('user');
+		$user['age']= 19;
+		session('user', $user);*/
+		//直接修改
+		session('user.age', 20);
+		dump(session('user'));
+		//判断是否设置session
+		dump(session('?user'));
+
+		//读取所有session
+		dump(session());
+
+		//删除所有session
+		session(null);
+		dump(session());
+	}
+
+
+
 }
 ?>
