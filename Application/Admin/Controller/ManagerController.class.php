@@ -4,6 +4,9 @@ use Think\Controller;
 class ManagerController extends Controller{
 
 	public function index(){
+		$model = D('Manager');
+		$data = $model -> select();
+		$this -> assign('data', $data);
 		$this -> display();
 	}
 

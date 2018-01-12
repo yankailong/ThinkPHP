@@ -113,5 +113,20 @@ class TestController extends Controller
 		dump($res);
 	}
 
+	public function test(){
+		//使用自定义函数encrypt_phone加密手机号
+		// $phone = 15936729090;
+		// echo encrypt_phone($phone);
+		
+		//使用密码加密函数
+		// $password = '666666';
+		// load('Common/Common/str');
+		// echo encrypt_psssword($password);
+		
+		//类文件的引入
+		$page = new \Tools\Page();
+		echo $page -> getName();
+	}
+
 }
 ?>

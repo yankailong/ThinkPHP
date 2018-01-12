@@ -14,8 +14,17 @@ class GoodsController extends Controller{
 	public function add(){
 		if (IS_POST) {
 			$data = I('post.');
-			$model = M('Goods');
-			$res = $model -> add($data);
+			$model = D('Goods');
+			//add方法添加
+			// $res = $model -> add($data);
+			
+			//使用create方法自动创建数据集
+			if (!$model -> create($data)) {
+				$error = $model -> getError();
+				$this -> error($error);
+			}
+			$res = $model -> add();
+
 			if ($res) {
 				$this -> success('添加成功', U("Admin/Goods/index"));
 			}else{

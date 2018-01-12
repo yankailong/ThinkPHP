@@ -28,10 +28,10 @@
                     </ul>
                 </li>
             </ul>
-            <a class="brand" href="/Public/Admin/index.html"><span class="first">后台管理系统</span></a>
+            <a class="brand" href="/index.php/Admin/Index/index"><span class="first">后台管理系统</span></a>
             <ul class="nav">
-                <li class="active"><a href="/Public/Admin/javascript:void(0);">首页</a></li>
-                <li><a href="/Public/Admin/javascript:void(0);">系统管理</a></li>
+                <li class="active"><a href="/index.php/Admin/Index/index">首页</a></li>
+                <li><a href="/index.php/Admin/Index/index">系统管理</a></li>
                 <li><a href="/Public/Admin/javascript:void(0);">权限管理</a></li>
             </ul>
         </div>
@@ -41,15 +41,15 @@
 <div class="sidebar-nav">
     <a href="/Public/Admin/#error-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-exclamation-sign"></i>权限管理</a>
     <ul id="error-menu" class="nav nav-list collapse">
-        <li><a href="/Public/Admin/javascript:void(0);">管理员列表</a></li>
-        <li><a href="/Public/Admin/javascript:void(0);">管理员新增</a></li>
+        <li><a href="/index.php/Admin/Manager/index">管理员列表</a></li>
+        <li><a href="/index.php/Admin/Manager/add">管理员新增</a></li>
         <li><a href="/Public/Admin/javascript:void(0);">角色管理</a></li>
         <li><a href="/Public/Admin/javascript:void(0);">权限管理</a></li>
     </ul>
     <a href="/Public/Admin/#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-exclamation-sign"></i>商品管理</a>
     <ul id="accounts-menu" class="nav nav-list collapse in">
-        <li><a href="/Public/Admin/javascript:void(0);">商品列表</a></li>
-        <li><a href="/Public/Admin/javascript:void(0);">商品新增</a></li>
+        <li><a href="/index.php/Admin/Goods/index">商品列表</a></li>
+        <li><a href="/index.php/Admin/Goods/add">商品新增</a></li>
         <li><a href="/Public/Admin/javascript:void(0);">商品类型</a></li>
         <li><a href="/Public/Admin/javascript:void(0);">商品分类</a></li>
     </ul>
