@@ -108,7 +108,7 @@
             </thead>
             <tbody>
                 <?php if(is_array($data)): foreach($data as $k=>$vol): ?><tr class="success">
-                        <td>1</td>
+                        <td><?php echo ($vol["id"]); ?></td>
                         <td><a href="/Public/Admin/javascript:void(0);"><?php echo ($vol["goods_name"]); ?></a></td>
                         <td><?php echo ($vol["goods_price"]); ?></td>
                         <td><?php echo ($vol["goods_number"]); ?></td>
